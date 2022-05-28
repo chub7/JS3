@@ -29,6 +29,13 @@
 // console.log(sum3);
 
 // 4. Найдите сумму чисел в каждом числе от 1 до 5, например: в числе 3 сумма составляет 6 (1+2+3).
+// let res = 0;
+// for ( let i = 1; i <= 5; i ++) {
+      
+//     res += i;
+//     console.log (`суммa чисел ${i} = ${res}`);
+
+// }
 
 // 5. Выведите чётные числа от 8 до 56. Решить задание через while и for.
 
@@ -86,21 +93,58 @@
 // 9 Дана строка с числами разделенными пробелами «4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57».
 //  Найдите самое большое и самое маленькое число в строке, используя цикл.
 
-// let str = `4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57`, num ;
-// let max = 0; 
+let str = `4 98 4 6 -1 32 4 65 4 3 5 7 89 7 10 1 36 8 57`;
+let max = 0; 
+let num = ``;
+let min = 0 ;
+let lastNum = 1;
+for (let i = 0; i <= str.length-1; i++) {
+    // if (str[i] === " " ) {
+    //     num = ``;
+    // } else {
+        
+    //     num += str[i];
+    //     if (str[i+1] !== ``) {
+    //         num  += str[i+1]
+    //     }
 
-// for (let i = 0; i <= str.length; i++) {
-//     if (str[i] === " ") {
-//         if(str[++i] !== " ") {
-//             max = Number(str[i-1]+str[i])
-//         }
-//         if ( max < str[i]){
-//         max =str[i]} 
-//     }
+        
+    //     console.log(num);
+        
+        
+    // }
+     // if ( lastNum < num  ) {
+    //     max = num;
+        
+    // }
+    // num = ``;
+    if (str[i] !=  ` `) {
+        num  += str[i];
 
-// }
+    } else {
+        console.log(num);
+        if( num > max ) {
 
-// console.log(max);
+            max = num; 
+
+        } else if ( num < min) {
+
+            min = num; 
+
+        }
+        num = ``;
+    }
+
+    
+    
+    
+
+   
+}
+
+// console.log(`max ${max}`);
+
+console.log(`Max = ${max} Min = ${min}`);
 
 //10. Дано произвольное целое число n. Написать программу, которая:
 // a. разбивает число n на цифры и выводит их на экран;
@@ -108,15 +152,15 @@
 // c. находит сумму цифр числа n;
 // d. меняет порядок цифр числа n на обратный.
 
-let str = prompt(), 
-    spaceStr = "" ,
-    strInverse = "", 
-    i = 0, 
-    sum = 0;
+// let str = prompt(), 
+//     spaceStr = "" ,
+//     strInverse = "", 
+//     i = 0, 
+//     sum = 0;
 
-for ( ; i < str.length; i++) {
-    sum += Number(str[i]);
-    spaceStr += str[i]+ " ";
-    strInverse += str.length-i;
-}
-console.log(`${spaceStr} , ${i} , sum = ${sum} , inverse = ${strInverse}`);
+// for ( ; i < str.length; i++) {
+//     sum += Number(str[i]);
+//     spaceStr += str[i]+ " ";
+//     strInverse += str.length-i;
+// }
+// console.log(`${spaceStr} , ${i} , sum = ${sum} , inverse = ${strInverse}`);
